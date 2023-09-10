@@ -16,7 +16,7 @@
         android:layout_marginTop="16dp" />
 
     <!-- Sever Discord -->
-    <Button
+    <TextView
         android:id="@+id/severDiscord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,11 +24,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         tools:ignore="UseCompoundDrawables"
-        android:text="Server Discord"
-        android:textSize="18sp" />
+        android:text="@string/server_discord"
+        android:textSize="28sp" />
 
     <!-- Fanpage -->
-    <Button
+    <TextView
         android:id="@+id/fanpage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,11 +36,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         tools:ignore="UseCompoundDrawables"
-        android:text="Fanpage"
-        android:textSize="18sp" />
+        android:text="@string/fanpage"
+        android:textSize="28sp" />
 
     <!-- YouTube -->
-    <Button
+    <TextView
         android:id="@+id/youtube"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,10 +49,10 @@
         android:layout_marginTop="16dp"
         tools:ignore="UseCompoundDrawables"
         android:text="@string/youtube"
-        android:textSize="18sp" />
+        android:textSize="28sp" />
 
     <!-- Facebook -->
-    <Button
+    <TextView
         android:id="@+id/facebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,5 +61,5 @@
         android:layout_marginTop="16dp"
         tools:ignore="UseCompoundDrawables"
         android:text="@string/facebook"
-        android:textSize="18sp" />
+        android:textSize="28sp" />
 </RelativeLayout>

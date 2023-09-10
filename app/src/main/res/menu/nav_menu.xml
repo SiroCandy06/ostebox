@@ -22,13 +22,18 @@
             android:id="@+id/nav_info"
             android:icon="@drawable/info"
             android:title="Info"></item>
-
-
     </group>
-
+    <item
+        android:title="Tool Osteup">
+        <menu>
+            <item
+                android:id="@+id/nav_convertsetedit"
+                android:icon="@drawable/convert"
+                android:title="Convert Code Setedit"></item>
+        </menu>
+    </item>
     <item
         android:title="">
-
         <menu>
             <item
                 android:id="@+id/nav_exit"

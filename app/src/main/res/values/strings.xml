@@ -12,5 +12,11 @@
     <string name="fanpage_link">https://www.facebook.com/noobpie/</string>
     <string name="youtube_link">https://www.youtube.com/channel/UCqnb_ntxhhG_js7OdiSGs1A</string>
     <string name="facebook_link">https://www.facebook.com/SiroCandy06/</string>
+    <string name="fanpage">Fanpage</string>
+    <string name="server_discord">Server Discord</string>
+    <string name="enter_code">Nhập Code...</string>
+    <string name="generate_code">Generate Code</string>
+    <string name="generated_code_will_appear_here">Code được Chuyển hoá tại đây</string>
+    <string name="select_option_prompt" />
 
 </resources>

@@ -4,8 +4,17 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.text.Spannable
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
 import android.view.MenuItem
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -52,6 +61,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 .replace(R.id.fragment_container, Info()).commit()
             R.id.nav_tool -> supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, Tools()).commit()
+            R.id.nav_convertsetedit -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, convertsetedit()).commit()
             R.id.nav_exit -> {
                 Toast.makeText(this, "Exit Completed", Toast.LENGTH_SHORT).show()
                 finishAffinity()
@@ -70,36 +81,45 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-    class InfoActivity : AppCompatActivity() {
+    class InfoActivity : AppCompatActivity() { // Đây là hoạt động khi bấm vào nút của info
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.fragment_info)
 
-            val discordButton = findViewById<Button>(R.id.severDiscord)
-            val fanpageButton = findViewById<Button>(R.id.fanpage)
-            val youtubeButton = findViewById<Button>(R.id.youtube)
-            val facebookButton = findViewById<Button>(R.id.facebook)
+            val discordTextView = findViewById<TextView>(R.id.severDiscord)
+            val fanpageTextView = findViewById<TextView>(R.id.fanpage)
+            val youtubeTextView = findViewById<TextView>(R.id.youtube)
+            val facebookTextView = findViewById<TextView>(R.id.facebook)
 
-            discordButton.setOnClickListener {
-                val discordUrl = getString(R.string.discord_link)
-                openWebPage(discordUrl)
-            }
+            val discordSpan = createClickableSpan(getString(R.string.discord_link))
+            val fanpageSpan = createClickableSpan(getString(R.string.fanpage_link))
+            val youtubeSpan = createClickableSpan(getString(R.string.youtube_link))
+            val facebookSpan = createClickableSpan(getString(R.string.facebook_link))
 
-            fanpageButton.setOnClickListener {
-                val fanpageUrl = getString(R.string.fanpage_link)
-                openWebPage(fanpageUrl)
-            }
+            discordTextView.text = setClickableSpanText("Discord", discordSpan)
+            fanpageTextView.text = setClickableSpanText("Fanpage", fanpageSpan)
+            youtubeTextView.text = setClickableSpanText("YouTube", youtubeSpan)
+            facebookTextView.text = setClickableSpanText("Facebook", facebookSpan)
 
-            youtubeButton.setOnClickListener {
-                val youtubeUrl = getString(R.string.youtube_link)
-                openWebPage(youtubeUrl)
-            }
+            discordTextView.movementMethod = LinkMovementMethod.getInstance()
+            fanpageTextView.movementMethod = LinkMovementMethod.getInstance()
+            youtubeTextView.movementMethod = LinkMovementMethod.getInstance()
+            facebookTextView.movementMethod = LinkMovementMethod.getInstance()
+        }
 
-            facebookButton.setOnClickListener {
-                val facebookUrl = getString(R.string.facebook_link)
-                openWebPage(facebookUrl)
+        private fun createClickableSpan(url: String): ClickableSpan {
+            return object : ClickableSpan() {
+                override fun onClick(view: View) {
+                    openWebPage(url)
+                }
             }
+        }
+
+        private fun setClickableSpanText(text: String, span: ClickableSpan): Spannable {
+            val spannable = Spannable.Factory.getInstance().newSpannable(text)
+            spannable.setSpan(span, 0, text.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+            return spannable
         }
 
         @SuppressLint("QueryPermissionsNeeded")
@@ -113,6 +133,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 }
+
+// Code Setedit
 
 
 
