@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Animation khi mở DrawerLayout -->
+    <translate
+        android:duration="500"
+        android:fromXDelta="100%p"
+        android:toXDelta="0"
+        android:id="@+id/slide_in_left" />
+
+    <!-- Animation khi đóng DrawerLayout -->
+    <translate
+        android:duration="500"
+        android:fromXDelta="0"
+        android:toXDelta="-100%p"
+        android:id="@+id/slide_out_left" />
+</set>

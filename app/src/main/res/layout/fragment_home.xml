@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- Giới thiệu -->
+    <TextView
+        android:id="@+id/Gioithieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giới thiệu"
+        android:textSize="30sp"
+        android:textStyle="bold"
+         />
+
+    <!-- Các dòng văn bản -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Các công cụ sẽ nằm trong tools"
+        android:textSize="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/patrick_hand" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="trong tương lai sẽ bổ sung thêm chức năng"
+        android:textSize="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/patrick_hand" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App vẫn còn code sơ sài"
+        android:textSize="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/patrick_hand" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trong tương lai tới sẽ bổ sung thêm chức năng cho app"
+        android:textSize="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/patrick_hand" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App By Andmin Yurayuraa ( SeverDiscord O-Osteup )"
+        android:textSize="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/patrick_hand" />
+
+</LinearLayout>

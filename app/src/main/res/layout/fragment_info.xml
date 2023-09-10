@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Info">
+
+    <!-- Tiêu đề Info -->
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact"
+        android:textSize="44sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Sever Discord -->
+    <Button
+        android:id="@+id/severDiscord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        tools:ignore="UseCompoundDrawables"
+        android:text="Server Discord"
+        android:textSize="18sp" />
+
+    <!-- Fanpage -->
+    <Button
+        android:id="@+id/fanpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/youtube"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        tools:ignore="UseCompoundDrawables"
+        android:text="Fanpage"
+        android:textSize="18sp" />
+
+    <!-- YouTube -->
+    <Button
+        android:id="@+id/youtube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/facebook"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        tools:ignore="UseCompoundDrawables"
+        android:text="@string/youtube"
+        android:textSize="18sp" />
+
+    <!-- Facebook -->
+    <Button
+        android:id="@+id/facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/severDiscord"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        tools:ignore="UseCompoundDrawables"
+        android:text="@string/facebook"
+        android:textSize="18sp" />
+</RelativeLayout>
